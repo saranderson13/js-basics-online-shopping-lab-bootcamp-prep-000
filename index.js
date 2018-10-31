@@ -46,10 +46,9 @@ function total() {
 }
 
 function removeFromCart(item) {
-  let i = 0;
-  while(i < cart.length) {
-    let itemFound = false;
-    let deleteItemIndex;
+  let itemFound = false;
+  let deleteItemIndex;
+  for(let i = 0; i < cart.length; i++) {
     if(item === cart[i].itemName) {
       itemFound = true;
       deleteItemIndex = i;
@@ -60,13 +59,13 @@ function removeFromCart(item) {
         console.log(i);
         console.log(itemFound);
         return cart;
-      } 
-    } else {
-        console.log(i);
-        console.log(itemFound);
-        return "That item is not in your cart.";
+      }
     }
-    i++;
+  }
+  if (itemFound === false) {
+    console.log(i);
+    console.log(itemFound);
+    return "That item is not in your cart.";
   }
 }
 
