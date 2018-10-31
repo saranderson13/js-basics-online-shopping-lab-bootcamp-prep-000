@@ -46,13 +46,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-  let itemFound;
-  let deleteItemIndex;
   for(let i = 0; i < cart.length; i++) {
-    let n = i;
-    if(item === cart[n].itemName) {
+    let itemFound;
+    let deleteItemIndex;
+    if(item === cart[i].itemName) {
       itemFound = true;
-      deleteItemIndex = n;
+      deleteItemIndex = i;
       
       if(itemFound === true) {
         cart.splice(deleteItemIndex, 1);
