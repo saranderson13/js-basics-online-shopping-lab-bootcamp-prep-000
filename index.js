@@ -49,9 +49,10 @@ function removeFromCart(item) {
   let itemFound;
   let deleteItemIndex;
   for(let i = 0; i < cart.length; i++) {
-    if(item === cart[i].itemName) {
+    let n = i;
+    if(item === cart[n].itemName) {
       itemFound = true;
-      deleteItemIndex = i;
+      deleteItemIndex = n;
       
       if(itemFound === true) {
         cart.splice(deleteItemIndex, 1);
