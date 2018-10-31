@@ -49,7 +49,7 @@ function removeFromCart(item) {
   let itemFound = false;
   let deleteItemIndex;
   for(let i = 0; i < cart.length; i++) {
-    if(item == cart[i].itemName) {
+    if(item === cart[i].itemName) {
       itemFound = true;
       deleteItemIndex = i;
       
