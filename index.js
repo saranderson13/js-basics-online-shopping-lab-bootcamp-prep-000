@@ -55,6 +55,9 @@ function removeFromCart(item) {
       
       if(itemFound === true) {
         cart.splice(deleteItemIndex, 1);
+        
+        console.log(i);
+        console.log(itemFound);
         return cart;
       } 
     } else {
