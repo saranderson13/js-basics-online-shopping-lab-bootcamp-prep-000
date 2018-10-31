@@ -58,6 +58,8 @@ function removeFromCart(item) {
         return cart;
       } 
     } else {
+        console.log(i);
+        console.log(itemFound);
         return "That item is not in your cart.";
     }
   }
